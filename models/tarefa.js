@@ -1,12 +1,11 @@
 const { model, Schema } = require("mongoose");
 
-// titulo, descricao, status (finalizada/pendente)
 const Tarefa = model(
   "tarefa", // nome do modelo (base p/ coleção)
   new Schema({
     // validação do documento
     titulo: {
-      type: String, // String, number, boolean
+      type: String, // String, Number, Boolean
       required: true,
     },
     descricao: {
@@ -19,4 +18,5 @@ const Tarefa = model(
     },
   })
 );
+
 module.exports = Tarefa;
